@@ -1,0 +1,160 @@
+/* Products.vue */
+.card-footer {
+  position: relative;
+  & .icon-cart {
+    position: absolute;
+    left: 10px;
+    z-index: 1;
+  }
+  & .icon-love {
+    position: absolute;
+    right: 10px;
+    z-index: 10;
+  }
+}
+.list-group {
+  position: sticky;
+  top: 60px;
+  &-item-action {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    color: $topic;
+    padding: 20px;
+  }
+  &:focus {
+    background-color:$topic;
+    color: #fff;
+  }
+  & .list-group-item.active {
+    z-index: 2;
+    color: #fff;
+    background-color: $topic;
+    border-color:  rgba(0, 0, 0, 0.125);
+  }
+}
+@include pad {
+  .list-group {
+    position: sticky;
+    top: 68px;
+  }
+}
+.form-control:focus {
+  border-color: $topic;
+  box-shadow: 0 0 0 0.2rem rgba(73, 30, 10, 0.5);
+}
+.product-card {
+  box-shadow: 2px 2px 5px hsla(0,0%,39.2%,.16);
+  transition: .8s;
+  &:hover .list-hover {
+    background: rgba(0, 0, 0, .5);
+    color: $white;
+  }
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+  }
+}
+.list-hover {
+  @include align-center;
+  background: transparent;
+  color: transparent;
+}
+@media (min-width: 450px) {
+  .product-card {
+    margin: 0 80px;
+  }
+}
+@media (min-width: 576px) {
+  .product-card {
+    margin: 0 0;
+  }
+}
+/* Product.vue */
+.carousel__inner a img {
+  height: 55px;
+  width: 55px;
+  margin-right: 8px;
+}
+.banner-lemon {
+  @include banner('~@/assets/image/lemon.jpg', 300px);
+  &-text {
+    @include position-center;
+    background: rgba(233, 172, 5, 0.8);
+  }
+}
+.hover-scale {
+  transition: 0.5s;
+  box-shadow: 0 0 5px rgba(0,0,0,.2);
+  &:hover {
+    cursor: pointer;
+    transform: translate(6px,-6px);
+    box-shadow: -3px 3px 10px rgba(0,0,0,.2);
+  }
+}
+.customer-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.product-title {
+  font-size: 24px;
+}
+.product-img {
+  height: 250px;
+  width: 100%;
+}
+@include smobile {
+  .product-img {
+    height: 350px;
+  }
+  .carousel__inner a img {
+    height: 65px;
+    width: 65px;
+    margin-right: 8px;
+  }
+}
+@include mobile {
+  .product-img {
+    height: 400px;
+  }
+  .carousel__inner a img {
+    height: 90px;
+    width: 90px;
+    margin-right: 10px;
+  }
+}
+@include pad {
+  .product-title {
+    font-size: 26px;
+  }
+  .message {
+    height: 212px;
+  }
+  .carousel__inner a img {
+    height: 63px;
+    width: 63px;
+    margin-right: 8px;
+  }
+}
+@include desktop {
+  .product-img {
+    height: 500px;
+  }
+  .product-title {
+    font-size: 32px;
+  }
+  .message {
+    height: 236px;
+  }
+  .carousel__inner a img {
+    height: 85px;
+    width: 85px;
+    margin-right: 8px;
+  }
+}
+@media (min-width: 1200px) {
+  .carousel__inner a img {
+    height: 100px;
+    width: 100px;
+    margin-right: 10px;
+  }
+}

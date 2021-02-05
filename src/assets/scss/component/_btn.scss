@@ -1,0 +1,44 @@
+/* 全域設定 */
+.btn:focus {
+	outline: 0;
+	box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+}
+/* 首頁 btn */
+.btn {
+  &-index {
+    padding: 0.89rem 1rem;
+    font-size: 28px;
+    border-radius: 50px;
+  }
+  &-plan {
+    color:#000;
+    background-color: transparent; 
+    border: 2px solid #000;
+    transition: all .8s;
+    &:focus, &.btn:hover  {
+      background-color:  #000;
+      border-color: $gray-400;
+      color: #fff;
+    }
+  }
+}
+.subscribe .btn {
+  font-weight: bolder;
+  font-size: 22px;
+  padding: 0 16px;
+  border-radius: 0rem;
+}
+@include smobile {
+  .subscribe .btn {
+    padding: 0 23px;
+  }
+}
+/* view/front/Product.vue */
+.product-button {
+  width: 60%;
+}
+@include desktop {
+  .product-button {
+    width: 50%;
+  }
+}

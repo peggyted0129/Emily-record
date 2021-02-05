@@ -1,0 +1,278 @@
+/* 首頁 banner scrollDown 效果*/
+.demo a {
+  position: absolute;
+  padding-top: 60px;
+  bottom: 30px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  transform: translate(-50%);
+  color: #fff;
+  font-weight: bolder;
+  font : normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+  &:hover {
+    opacity: .7;
+  }
+  & span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 6px solid #fff;
+    border-bottom: 6px solid #fff;
+    transform: rotate(-45deg);
+    animation: sdb04 2s infinite;
+  }
+}
+@keyframes sdb04 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    transform: rotate(-45deg) translate(-10px, 10px);
+  }
+  40% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+}
+/* 訂閱 btn 的按鈕圓角 */
+.rounded-left {
+  border-top-left-radius: 0.25rem !important;
+  border-bottom-left-radius: 0.25rem !important;
+}
+.rounded-right {
+  border-top-right-radius: 0.25rem !important;
+  border-bottom-right-radius: 0.25rem !important;
+}
+.title-side:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -25px;
+  width: .4rem;
+  background-color: $warning;
+}
+/* 嚴選食材 */
+.stuff {
+  background-color: #f7f5f1;
+  overflow: hidden;
+  &-inner {
+    border: 3px solid white;
+    height: 230px;
+  }
+  & img {
+    width: 100%;
+    height: 200px;
+    transition: 1s;
+    object-fit: cover;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+/* 門市據點 */
+.shop-pic {
+  overflow: hidden;
+  & img {
+    transition: 1s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+.shop-link {
+  color: $secondary;
+  &:hover {
+    color: $topic;
+  }
+}
+/* 進口乳酪-cow */
+.banner-cow {
+  @include banner('~@/assets/image/cow.jpg',200px);
+  background-position: center 37%;
+  background-attachment: fixed;
+  &-text {
+    @include position-center;
+    background: rgba(233, 172, 5, 0.8);
+  }
+}
+.title-mark {
+  width: 75%;
+}
+/* 圖文交錯排版 */
+.eat {
+  &-bg {
+    @include banner('~@/assets/image/bgpic2.jpeg', 500px);
+    background-position: center top;
+  }
+  &-text{
+    text-align: center;
+    position: relative;
+    background: rgba(255,255,255,.7);
+  }
+}
+.fairy {
+  &-bg {
+    @include banner('~@/assets/image/bgpic5.jpg', 500px);
+    background-position: center top;
+  }
+  &-title {
+    height: 500px;
+  }
+  &-text{
+    text-align: center;
+    position: relative;
+    background: rgba(255,255,255,.7);
+  }
+}
+/* home-banner */
+.home-banner {
+  @include banner("https://upload.cc/i1/2020/12/10/0mzbhk.jpg", 100vh);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  &-text {
+    background: rgba(56, 27, 27, 0.4);
+    color: $white;
+    border: 5px double #000;
+  }
+  &-border {
+    border: 5px solid hsla(0,0%,100%,.7);
+  }
+  &-title {
+    font-size: 28px;
+  }
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 80%;
+  }
+}
+/* 訂閱 modal */
+.home-modal {
+  @include banner('~@/assets/image/mini2.jpg', 200px);
+  &-bg {
+    background: rgba(255, 255, 255, 0.7);
+    line-height: 2.5;
+    @include align-middle;
+  }
+}
+.subscribe {
+  @include banner("https://upload.cc/i1/2020/12/10/rJuiYq.jpg", 400px);
+  background-position: center center;
+  & .form-control {
+    border-radius: 0rem;
+    border: 2px solid $glass;
+    border-right: none;
+  }
+  & .input-group {
+    max-width: 425px;
+  }
+  & .btn {
+    padding: 0 10px;
+    font-size: 14px;
+  }
+}
+@include smobile {
+  .stuff img {
+    height: 250px;
+  }
+  .banner-cow {
+    height: 250px;
+  }
+  .home-banner .demo a {
+    left: 50%;
+    bottom: 20px;
+  }
+  .home-banner-title {
+    font-size: 36px;
+  }
+  .home-banner-text{
+    & .text-title {
+      font-size: 36px;
+    }
+    & .text-natural {
+      font-size: 23px;
+    }
+  }
+  .fairy-text, .eat-text {
+    & .h4 {
+      font-size: 32px;
+    }
+    & .h6 {
+      font-size: 18px;
+    }
+  }
+  .title-mark {
+    width: 55%;
+  }
+  .subscribe {
+    p {
+      font-size: 32px;
+    }
+    & .btn {
+      width: 30%;
+      font-size: 22px;
+    }
+  }
+}
+@include mobile {
+  .stuff img {
+    height: 280px;
+  }
+  .banner-cow {
+    height: 300px;
+  }
+  .subscribe {
+    & .btn {
+      width: 40%;
+    }
+  }
+  .home-banner-title {
+    font-size: 42px;
+  }
+}
+@include pad {
+  .stuff img {
+    height: 260px;
+  }
+  .banner-cow {
+    height: 350px;
+    &-text {
+      transform: translate(0%,-50%);
+      left: 5%;
+    }
+  }
+  .title-mark {
+    width: 30%;
+  }
+  .fairy-text, .eat-text {
+    background: transparent;
+    text-align: left;
+  }
+  .home-banner-text{
+    & .text-title {
+      font-size: 46px;
+    }
+    & .text-natural, & .text-piece {
+      font-size: 28px;
+    }
+    & .text-since {
+      font-size: 20px;
+    }
+  }
+}
+@include desktop {
+  .banner-cow {
+    height: 400px;
+  }
+}

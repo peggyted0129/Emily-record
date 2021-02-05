@@ -1,0 +1,128 @@
+/* Frontstage.vue */
+.modal-dialog {
+  margin: 1.75rem 10px;
+}
+@include mobile {
+  .modal-dialog {
+    margin: 1.75rem auto;
+  }
+}
+.footer {
+	position : fixed;
+	bottom: 0;
+	width: 100%;
+  z-index: 100;
+  &-icon {
+    & .material-icons {
+      color: $topic;
+      &:hover {
+        color: $white;
+      }
+    }
+    & .fab {
+      color: $topic;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+.favorite {
+  z-index: 999;
+  bottom: 25px;
+  right: 30px;
+  transition: all 0.4s ease-in-out 0s;
+  & .material-icons {
+    color: $warning;
+    &:hover {
+      color: $white;
+    }
+    &:focus {
+      color: $white;
+    }
+  }
+  & .badge {
+    padding: 5px 8px;
+    font-size: 90%;
+  }
+  & .btn {
+    padding: 3px 12px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #6c757d;
+    background: $white;
+    &:hover,
+    &:focus {
+      background: $topic;
+    }
+  }
+}
+.scroll-top {
+  z-index: 999;
+  bottom: 110px;
+  right: 51px;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  transition: all 0.4s ease-in-out 0s;
+}
+.scroll-up {
+  padding: 6px 22px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #6c757d;
+  color: $white;
+  background: $warning;
+  &:hover {
+    background: $topic;
+    color: $warning;
+  }
+}
+/* Cart.vue */
+.cart-mark {
+  position: relative;
+  &:before {
+    @include nav-hover;
+    width: 10px;
+    height: 10px;
+    @include align-middle;
+    left: 45px;
+  }
+}
+.cartzero {
+  @include banner('~@/assets/image/cart.jpg', 300px);
+  width: 100%;
+  &-bg {
+    background: rgba(255, 255, 255, 0.6);
+  }
+}
+.pageDisabled {
+  pointer-events: none!important;
+  opacity: .65!important;
+}
+/* Login.vue */
+.login {
+  padding-top: 88px;
+  &-banner {
+    @include banner('https://upload.cc/i1/2020/12/11/0dkNh1.jpg', 220px);
+  }
+}
+@include pad {
+  .login-banner {
+    height: calc(100vh - 82px - 40px - 110px);
+  }
+}
+/* OrderCreate.vue */
+.invalid-feedback {
+  font-size: 100%;
+}
+/* OrderPaid.vue */
+.finish {
+  height: calc(100vh - 255px - 24px - 122px -38px);
+  & i {
+    font-size: 100px;
+  }
+}
+/* OrderPaying.vue */
+.order-pic {
+  width: 100px;
+  height: 100px;
+}

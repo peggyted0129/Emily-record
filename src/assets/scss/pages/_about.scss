@@ -1,0 +1,95 @@
+.txt, .txt-reverse {
+  font-size: 16px;
+  padding: 20px;
+  background: rgba(255,255,255,.75);
+  &:before {
+    display: none;
+  }
+}
+.store {
+  @include banner('~@/assets/image/shop2.jpg', 500px);
+  margin-bottom: 150px;
+  &-txt {
+    font-size: 16px;
+    background: rgba(255,255,255,.75);
+  }
+}
+.about-banner {
+  @include banner('~@/assets/image/cont.png', 430px);
+}
+.about-text {
+  font-size: 16px;
+}
+.title-line {
+  font-size: 24px;
+  &:before {
+    @include nav-hover;
+    width: 10%;
+    height: 3px;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $topic;
+  }
+}
+@include mobile {
+  .store-txt {
+    font-size: 20px;
+  }
+  .txt, .txt-reverse {
+    font-size: 20px;
+  }
+  .title-line {
+    font-size: 32px;
+  }
+  .about-text {
+    font-size: 20px;
+  }
+}
+@include pad {
+  .txt, .txt-reverse {
+    padding: 10px;
+    margin-left: 0px;
+    &:before {
+      @include nav-hover;
+      width: 25%;
+      height: 15px;
+      transform: translateX(-50%);
+      background: $warning;
+      display: none;
+    }
+  }
+}
+@include desktop {
+  .txt, .txt-reverse {
+    padding: 40px;
+    margin-left: -100px;
+    &:before {
+      display: block;
+    }
+  }
+  .txt-reverse {
+    margin-right: -100px;
+    &:before {
+      top: 15px;
+      right: -65px;
+    }
+  }
+  .txt:before {
+    top: 15px;
+    left: 35px;
+  }
+  .about-text {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1200px) {
+  .txt:before {
+    top: 50px;
+    left: 44px;
+  }
+  .txt-reverse:before {
+    top: 65px;
+    right: -75px;
+  }
+}
