@@ -13,7 +13,7 @@
             </router-link>
           </li>
           <li>
-            <a class="text-center mr-sm-10 mr-4" href="https://github.com/peggyted0129/Emily_record" target="_blank">
+            <a class="text-center mr-sm-10 mr-4" href="https://github.com/peggyted0129/Emily-record" target="_blank">
               <i class="fab fa-github-square h1"></i>
             </a>
           </li>
@@ -206,14 +206,6 @@ export default {
     }
   },
   watch: {
-    footerNone () {
-      const vm = this
-      if (vm.routerName === 'Home') {
-        vm.footerHide = true
-      } else {
-        vm.footerHide = false
-      }
-    },
     $route (to, from) {
       const vm = this
       if (to.path !== from.path) {
