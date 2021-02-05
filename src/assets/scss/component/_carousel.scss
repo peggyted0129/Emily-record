@@ -36,6 +36,9 @@
     margin: 0;
   }
 }
+.swiper-slide .card-body {
+  margin: 0 10px;
+}
 @include smobile {
   h5.carousel-title {
     font-size: 24px;
