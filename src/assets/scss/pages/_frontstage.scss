@@ -107,7 +107,7 @@
 }
 @include pad {
   .login-banner {
-    height: calc(100vh - 82px - 40px - 110px);
+    height: 400px;
   }
 }
 /* OrderCreate.vue */
@@ -116,7 +116,7 @@
 }
 /* OrderPaid.vue */
 .finish {
-  height: calc(100vh - 255px - 24px - 122px -38px);
+  margin-bottom: 100px;
   & i {
     font-size: 100px;
   }

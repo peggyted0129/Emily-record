@@ -1,12 +1,12 @@
 <template>
-  <section class="login pb-6 text-topic">
+  <section class="login text-topic mb-16">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-md-8 col-12">
+        <div class="col-md-8 col-12 py-md-10 py-0">
           <div class="login-banner"></div>
         </div>
         <div class="col-md-4 col-12">
-          <div class="login-from">
+          <div class="login-from mb-10 mb-md-0">
             <h2 class="font-weight-bolder mb-md-8 mb-5">Log in</h2>
             <Validation-observer v-slot="{ invalid }">
               <form @submit.prevent="signin">

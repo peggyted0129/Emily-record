@@ -14,7 +14,7 @@
       <li class="mb-7">
         <p class="h5">感謝您對 <strong>Emily Cake</strong> 的信任，商品將會在 1 - 3 天送到，請耐心等候。</p>
       </li>
-      <li class="text-center w-100 mb-7">
+      <li class="text-center w-100 mb-10">
         <router-link to="/products" class="btn btn-warning font-weight-bolder w-50">繼續購物</router-link>
       </li>
     </ul>
