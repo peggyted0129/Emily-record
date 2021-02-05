@@ -121,7 +121,7 @@ export default {
   data () {
     return {
       carData: JSON.parse(localStorage.getItem('carData')) || [],
-      routerName: this.$route.namem,
+      routerName: this.$route.name,
       footerHide: false
     }
   },
@@ -192,7 +192,7 @@ export default {
         document.querySelector('.scroll-top').style.opacity = '0'
       }
     },
-    footerNone () {
+    footerNo () {
       const vm = this
       const { routerName } = this
       switch (true) {
@@ -206,12 +206,20 @@ export default {
     }
   },
   watch: {
+    footerNone () {
+      const vm = this
+      if (vm.routerName === 'Home') {
+        vm.footerHide = true
+      } else {
+        vm.footerHide = false
+      }
+    },
     $route (to, from) {
       const vm = this
       if (to.path !== from.path) {
         vm.routerName = to.name
         vm.footerHide = false
-        vm.footerNone()
+        vm.footerNo()
       }
     }
   },
@@ -222,8 +230,11 @@ export default {
     window.removeEventListener('scroll', this.ScrollHeight)
   },
   created () {
-    this.getFavorites()
-    this.footerHide = true
+    const vm = this
+    if (vm.routerName === 'Home') {
+      vm.footerHide = true
+    }
+    vm.getFavorites()
   }
 }
 </script>
