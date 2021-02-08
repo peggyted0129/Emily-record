@@ -219,7 +219,6 @@ export default {
       vm.$http.get(api).then((res) => {
         vm.cart = res.data.data
         vm.cartLength = res.data.data.carts.length
-        console.log('getCarts', res.data.data)
         vm.$store.dispatch('updateLoading', false)
       })
     },

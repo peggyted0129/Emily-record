@@ -41,6 +41,7 @@
   &-scroll {
     background-color: $warning !important;
     & .navbar-logo {
+      font-family: Kaushan Script, cursive;
       font-size: 40px;
       color: $topic;
       &:hover {
@@ -76,7 +77,6 @@
     }
   }
   .navbar-logo {
-    font-family: Kaushan Script, cursive;
     transition: all 0.25s ease;
     font-size: 3rem;
     color: $white;

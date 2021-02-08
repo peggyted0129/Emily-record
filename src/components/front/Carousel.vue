@@ -8,7 +8,7 @@
             <ul class="swiper-slide" v-for="product in products" :key="product.id">
               <li class="card w-100 border-0">
                 <router-link :to="{ name: 'ProductDetail', params: { id: product.id } }"
-                class="card-body position-relative border shadow radius-m text-topic p-0">
+                class="card-body position-relative border radius-m text-topic p-0">
                   <div style="height:230px">
                     <img class="card-img h-100 w-100" :src="product.imageUrl" alt="product-pic">
                   </div>

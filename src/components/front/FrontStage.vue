@@ -4,7 +4,7 @@
     <NavBar />
     <Alert />
     <router-view />
-    <footer :class="{ 'position-static': footerHide }" class="bg-warning footer">
+    <footer :class="{ 'position-fixed': footerfixed }" class="bg-warning footer">
       <div class="container-fluid container-md py-5">
         <ul class="footer-icon d-flex align-items-center justify-content-center">
           <li>
@@ -80,11 +80,7 @@
                       </span>
                     </div>
                   </th>
-                  <td class="pl-1 pr-0 pl-sm-5">
-                    <router-link :to="{ name: 'ProductDetail', params: { id: item.id } }" class="text-topic font-weight-bolder">
-                      {{ item.title }}
-                    </router-link>
-                  </td>
+                  <td class="text-topic font-weight-bolder pl-1 pr-0 pl-sm-5">{{ item.title }}</td>
                   <td class="text-left text-topic font-weight-bolder d-none d-sm-table-cell">1 {{ item.unit }}</td>
                   <td class="text-right text-topic font-weight-bolder pl-0">
                     {{ item.price }}
@@ -122,7 +118,7 @@ export default {
     return {
       carData: JSON.parse(localStorage.getItem('carData')) || [],
       routerName: this.$route.name,
-      footerHide: false
+      footerfixed: false
     }
   },
   computed: {
@@ -192,15 +188,15 @@ export default {
         document.querySelector('.scroll-top').style.opacity = '0'
       }
     },
-    footerNo () {
+    footerFixed () {
       const vm = this
       const { routerName } = this
       switch (true) {
-        case routerName === 'Home':
-          vm.footerHide = true
+        case routerName === 'Login' || 'OrderPaid':
+          vm.footerfixed = true
           break
         default:
-          vm.footerHide = false
+          vm.footerfixed = false
           break
       }
     }
@@ -210,8 +206,8 @@ export default {
       const vm = this
       if (to.path !== from.path) {
         vm.routerName = to.name
-        vm.footerHide = false
-        vm.footerNo()
+        vm.footerfixed = false
+        vm.footerFixed()
       }
     }
   },
@@ -223,8 +219,10 @@ export default {
   },
   created () {
     const vm = this
-    if (vm.routerName === 'Home') {
-      vm.footerHide = true
+    if (vm.routerName === 'Login') {
+      vm.footerfixed = true
+    } else if (vm.routerName === 'OrderPaid') {
+      vm.footerfixed = true
     }
     vm.getFavorites()
   }

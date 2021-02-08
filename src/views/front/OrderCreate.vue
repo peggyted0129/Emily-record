@@ -190,12 +190,12 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header bg-warning">
-              <h5 class="modal-title">Emily Shop</h5>
+              <h5 class="modal-title h3">Emily Shop</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body py-8 font-weight-bolder lh-lg">
+            <div class="modal-body py-8 font-weight-bolder lh-lg h5">
               尚未結帳完成，請問是否確定離開此頁 ? 若離開此頁，
               <span class="text-danger">購物車商品將需重新選購 !</span>
             </div>

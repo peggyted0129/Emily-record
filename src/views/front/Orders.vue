@@ -31,7 +31,7 @@
         </tbody>
         </table>
       </div>
-      <Pagination class="mt-7 mb-18" :pages="pagination" @emitPages="getAllOrders"></Pagination>
+      <Pagination class="mt-7 mb-10" :pages="pagination" @emitPages="getAllOrders"></Pagination>
     </div>
   </section>
 </template>

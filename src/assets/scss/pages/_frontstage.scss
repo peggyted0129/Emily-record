@@ -8,7 +8,7 @@
   }
 }
 .footer {
-	position : fixed;
+	position : static;
 	bottom: 0;
 	width: 100%;
   z-index: 100;
@@ -113,6 +113,12 @@
 /* OrderCreate.vue */
 .invalid-feedback {
   font-size: 100%;
+}
+.btn-warning.disabled, .btn-warning:disabled {
+  cursor: not-allowed;
+}
+.btn.disabled {
+  cursor: not-allowed;
 }
 /* OrderPaid.vue */
 .finish {

@@ -7,9 +7,9 @@
       </div>
       <!-- 購物車為空 -->
       <div class="mb-16" v-if="carData.length == 0">
-        <div class="cartzero mb-10 pl-15 d-flex align-items-center">
+        <div class="cartzero mb-10 pl-md-15 pl-0 d-flex align-items-center justify-content-center justify-content-md-start">
           <div class="cartzero-bg d-flex flex-column align-items-center p-5">
-            <p to="/products" class="h3 font-weight-bolder text-topic pb-10">你的購物車是空的~</p>
+            <p to="/products" class="h3 font-weight-bolder text-topic pb-10">購物車空空的</p>
             <router-link to="/products" class="btn h3 w-100 btn-topic py-4 mb-3">前往商品列表</router-link>
           </div>
         </div>
@@ -114,7 +114,7 @@
           <li>
             <p class="text-topic mb-3">【聯絡客服】</p>
             <p class="cart-mark pl-14"> 歡迎與我們聯絡：</p>
-            <p class="pl-14"> 客服電話：(07)8350-123 </p>
+            <a class="text-secondary pl-14" href="tel:+886-7-8350123"> 客服電話：(07)8350-123 </a>
             <p class="pl-14"> 服務時間：週一至週五：AM 09:00~PM 17:00 </p>
           </li>
         </ul>
