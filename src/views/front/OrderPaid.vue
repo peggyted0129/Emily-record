@@ -8,13 +8,13 @@
         <li class="breadcrumb-item font-weight-bolder active" aria-current="page">付款完成</li>
       </ol>
     </nav>
-    <ul class="finish d-flex flex-column justify-content-center align-items-center">
-      <li class="mb-7"><i class="fas fa-truck"></i></li>
-      <li class="mb-7"><h3 class="h2">恭喜您，已完成付款結帳囉 ！</h3></li>
-      <li class="mb-7">
+    <ul class="finish d-flex flex-column justify-content-center align-items-center mt-10">
+      <li class="mb-9"><i class="fas fa-truck"></i></li>
+      <li class="mb-9"><h3 class="h2">恭喜您，已完成付款結帳囉 ！</h3></li>
+      <li class="mb-9">
         <p class="h5">感謝您對 <strong>Emily Cake</strong> 的信任，商品將會在 1 - 3 天送到，請耐心等候。</p>
       </li>
-      <li class="text-center w-100 mb-10">
+      <li class="text-center w-100 mb-9">
         <router-link to="/products" class="btn btn-warning font-weight-bolder w-50">繼續購物</router-link>
       </li>
     </ul>

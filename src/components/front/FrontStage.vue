@@ -192,7 +192,7 @@ export default {
       const vm = this
       const { routerName } = this
       switch (true) {
-        case routerName === 'Login' || 'OrderPaid':
+        case routerName === 'Login':
           vm.footerfixed = true
           break
         default:
@@ -220,8 +220,6 @@ export default {
   created () {
     const vm = this
     if (vm.routerName === 'Login') {
-      vm.footerfixed = true
-    } else if (vm.routerName === 'OrderPaid') {
       vm.footerfixed = true
     }
     vm.getFavorites()
