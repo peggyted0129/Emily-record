@@ -122,6 +122,12 @@
 }
 /* OrderPaid.vue */
 .finish {
+  max-width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  &-banner {
+    @include banner('~@/assets/image/food.jpg', 578px);
+    background-position: 50%;
+  }
   & i {
     font-size: 100px;
   }
