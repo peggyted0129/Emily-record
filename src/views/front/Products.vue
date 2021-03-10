@@ -47,12 +47,12 @@
                     <i class="fa fa-cart-plus fa-2x"></i>
                   </a>
                   <!-- 加入最愛 -->
-                  <button class="icon-love btn text-danger" @click="addToFavorites(product)" type="button"
+                  <button class="icon-love btn text-danger" @click.prevent="addToFavorites(product)" type="button"
                    v-if="!favorites.map((item) => item.id).includes(product.id)">
                     <i class="far fa-heart fa-2x"></i>
                   </button>
                   <!-- 移除最愛 -->
-                  <button class="icon-love btn text-danger" @click="removeFavoritesItem(product)" type="button"
+                  <button class="icon-love btn text-danger" @click.prevent="removeFavoritesItem(product)" type="button"
                    v-if="favorites.map((item) => item.id).includes(product.id)">
                     <i class="fas fa-heart fa-2x"></i>
                   </button>
